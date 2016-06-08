@@ -1,5 +1,5 @@
 namespace '/temperature' do
   get do
-    'Hello World'
+    erb :'temperature.html'
   end
 end

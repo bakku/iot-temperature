@@ -11,8 +11,8 @@ class DataRetriever
     stdout, stderr, status = Open3.capture3("sudo python #{File.dirname(__FILE__)}/adafruit_retriever.py #{DHT_VERSION} #{GPIO}")
 
     if status.success?
-      @humidity = stdout.split("\n").first
-      @temperature = stdout.split("\n").last
+      @temperature = stdout.split("\n").first
+      @humidity = stdout.split("\n").last
     else
       @humidity = 'n/a'
       @temperature = 'n/a'
